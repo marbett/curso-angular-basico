@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HeroModule } from './hero/hero.module';
 //import { CounterModule } from './counter/counter.module';
 import { CounterDetailComponent } from './counter/detail/counter-detail.component';
+import { DragonBallModule } from './dragon-ball/dragon-ball.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { CounterDetailComponent } from './counter/detail/counter-detail.componen
   imports: [
     BrowserModule,
     HeroModule,
+    DragonBallModule,
     //CounterModule
   ],
   providers: [],

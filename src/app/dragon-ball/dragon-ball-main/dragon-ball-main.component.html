@@ -1,0 +1,18 @@
+
+
+
+
+<h1>Dragon Ball Main Page</h1>
+<div>        
+    <app-dragon-ball-detail></app-dragon-ball-detail><hr/>
+</div>
+<div class="row">
+    
+    <div class="col">
+        <app-dragon-ball-list [personajesList]="personajes"></app-dragon-ball-list>
+    </div>
+    <div class="col">
+       <app-dragon-ball-add [personajes]="personajes" [personaje]="personaje"></app-dragon-ball-add>
+    </div>
+
+</div>
