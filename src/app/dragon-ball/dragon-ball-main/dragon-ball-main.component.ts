@@ -23,5 +23,10 @@ export class DragonBallMainComponent {
     poder: 0
   }
 
+  agregarNuevoPersonaje (personaje: Personaje) {
+    console.log("Estoy en el agregar nuevo personaje del main");
+    console.log(personaje);
+    this.personajes.push(personaje);
+  }
   
 }

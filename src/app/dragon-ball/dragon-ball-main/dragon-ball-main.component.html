@@ -9,10 +9,22 @@
 <div class="row">
     
     <div class="col">
-        <app-dragon-ball-list [personajesList]="personajes"></app-dragon-ball-list>
+        <app-dragon-ball-list 
+            [personajesList]="personajes"
+        >
+        </app-dragon-ball-list>
     </div>
     <div class="col">
-       <app-dragon-ball-add [personajes]="personajes" [personaje]="personaje"></app-dragon-ball-add>
+       <!--<app-dragon-ball-add 
+            [personajes]="personajes" 
+            [personaje]="personaje"
+        >
+        </app-dragon-ball-add>-->
+        <app-dragon-ball-add 
+            [personaje]="personaje"
+            (onNewPersonaje) = "agregarNuevoPersonaje( $event )"
+        >
+        </app-dragon-ball-add>
     </div>
 
 </div>
