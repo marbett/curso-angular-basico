@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 
 import { Personaje } from '../dragon-ball-interface/dragon-ball-interface.component';
+import { DragonBallService } from '../dragon-ball-service/dragon-ball.service';
 
 
 @Component({
@@ -20,16 +21,23 @@ export class DragonBallAddComponent {
     poder: 0
   };
   
+  /*
   @Output()
   onNewPersonaje: EventEmitter<Personaje> = new EventEmitter<Personaje>();
+  */
+
+  constructor (private dragonballService: DragonBallService) {
+    
+  }
 
   agregarNgSubmit() {
     if (this.personaje.nombre.trim().length === 0) {
       return;
     }
-    //this.personajes.push(this.personaje)
+    
     console.log(this.personaje);
-    this.onNewPersonaje.emit(this.personaje);
+    //this.onNewPersonaje.emit(this.personaje);
+    this.dragonballService.agregarPersonaje(this.personaje);
     this.personaje = {
       nombre: "",
       poder: 0
@@ -37,7 +45,7 @@ export class DragonBallAddComponent {
 
   }
   
-
+  
   /*
   agregar (event: any) {
     event.preventDefault();

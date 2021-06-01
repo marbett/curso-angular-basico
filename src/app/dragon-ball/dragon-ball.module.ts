@@ -5,6 +5,7 @@ import { DragonBallListComponent } from './dragon-ball-list/dragon-ball-list.com
 import { FormsModule } from '@angular/forms';
 import { DragonBallMainComponent } from './dragon-ball-main/dragon-ball-main.component';
 import { DragonBallAddComponent } from './dragon-ball-add/dragon-ball-add.component';
+import { DragonBallService } from './dragon-ball-service/dragon-ball.service';
 
 
 
@@ -29,6 +30,9 @@ import { DragonBallAddComponent } from './dragon-ball-add/dragon-ball-add.compon
   imports: [
     CommonModule,
     FormsModule
+  ],
+  providers: [
+    DragonBallService
   ]
 })
 export class DragonBallModule { }
